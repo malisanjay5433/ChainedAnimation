@@ -53,20 +53,72 @@
                                     <constraint firstAttribute="height" constant="60" id="Joz-Vz-wu4"/>
                                 </constraints>
                             </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYB-l0-0ra">
+                                <rect key="frame" x="0.0" y="537" width="375" height="130"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woc-pp-Z0j">
+                                        <rect key="frame" x="165" y="16" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.43498798076923079" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Yr-Y1-cRN">
+                                        <rect key="frame" x="163" y="10" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Collapse Arrow_ffffff_50"/>
+                                        <connections>
+                                            <action selector="toggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qGo-pe-4bO"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N4j-Z0-NF9">
+                                        <rect key="frame" x="96" y="68" width="166" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCt-O5-5Dm">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" backgroundImage="Skype_ffffff_50"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s2-0g-Kzy">
+                                                <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="Snapchat_ffffff_50"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEA-JN-Cb0">
+                                                <rect key="frame" x="116" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" red="0.99215686270000003" green="0.59999999999999998" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="Facebook_000000_50"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="GVo-DD-OPB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IG6-TR-6Sm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-44.5" id="5OR-Br-qa6"/>
                             <constraint firstItem="Xyf-iE-51j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-42.5" id="Tli-CY-pe9"/>
                             <constraint firstItem="IG6-TR-6Sm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="42.5" id="Tp3-t7-vEk"/>
+                            <constraint firstAttribute="bottom" secondItem="tYB-l0-0ra" secondAttribute="bottom" constant="-70" id="UQM-Ph-ELH"/>
+                            <constraint firstItem="tYB-l0-0ra" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bmY-jp-VZh"/>
                             <constraint firstItem="Xyf-iE-51j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-44.5" id="e2j-9R-MsX"/>
+                            <constraint firstAttribute="trailing" secondItem="tYB-l0-0ra" secondAttribute="trailing" id="tO6-fD-J8w"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="bg" destination="2oe-CE-CXY" id="qcy-Sl-OaX"/>
+                        <outlet property="button" destination="0Yr-Y1-cRN" id="Bsp-35-nnS"/>
+                        <outlet property="circleView" destination="woc-pp-Z0j" id="zVs-Ub-HPg"/>
+                        <outlet property="fb" destination="MEA-JN-Cb0" id="8Ta-MQ-HSg"/>
+                        <outlet property="menuView" destination="tYB-l0-0ra" id="rbc-qI-7EZ"/>
+                        <outlet property="skpye" destination="hCt-O5-5Dm" id="JHL-wS-ly9"/>
                         <outlet property="skype" destination="Xyf-iE-51j" id="hyz-9U-E8U"/>
                         <outlet property="snap" destination="IG6-TR-6Sm" id="wlA-JW-fbU"/>
+                        <outlet property="snapChat" destination="5s2-0g-Kzy" id="g6s-tE-f2g"/>
                         <outlet property="subTxt" destination="ZBn-nH-1Qc" id="5iS-eP-W1A"/>
                         <outlet property="welcomeTxt" destination="QUS-0f-65d" id="ta2-fF-Kde"/>
                     </connections>
@@ -77,6 +129,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Collapse Arrow_ffffff_50" width="50" height="50"/>
+        <image name="Facebook_000000_50" width="50" height="50"/>
         <image name="Login&amp;Sign up Screen" width="375" height="667"/>
         <image name="Skype_ffffff_50" width="50" height="50"/>
         <image name="Snapchat_ffffff_50" width="50" height="50"/>
